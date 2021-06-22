@@ -1,0 +1,21 @@
+body {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.image_post img {
+    width: 300px;
+}
+
+.image_box {
+    display: flex;
+    justify-content: center;
+}
+
+.image_element {
+    margin: 5px;
+}
+
+.image_element img {
+    width: 300px;
+}

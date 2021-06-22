@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,8 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+// 画像投稿
+Route::get('/', [PostController::class, 'index'])->name('top');
+Route::post('image', [PostController::class, 'image'])->name('image');
+Route::post('store', [PostController::class, 'store'])->name('store');

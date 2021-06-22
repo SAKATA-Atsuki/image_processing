@@ -15,8 +15,7 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id')->comment('投稿ID');
-            $table->integer('user_id')->comment('ユーザーID');
-            $table->text('image')->comment('画像');
+            $table->text('image')->nullable($value = true)->comment('画像');
             $table->text('message')->nullable($value = true)->comment('メッセージ');
             $table->timestamp('created_at')->nullable($value = true)->comment('登録日時');
             $table->timestamp('updated_at')->nullable($value = true)->comment('更新日時');
